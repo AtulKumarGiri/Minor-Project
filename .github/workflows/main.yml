@@ -1,7 +1,7 @@
 on: 
   push:
       branches:
-          - dev
+          - main
 name: Production Deploy
 jobs:
   FTP-Deploy-Action:
@@ -16,5 +16,5 @@ jobs:
       with:
         server: ftpupload.net
         username: epiz_33028743
-        password: ${{ secrets.ftp_password }}
+        password: ${{ secrets.FTP_PASSWORD }}
     
