@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+section{
+    width: 100%;
+    /* transition: all .5; */
+    position: relative;
+}
+
+.right{
+    position: absolute;
+    height: 100%;
+    width: 87vw;
+    float: left;
+    margin: 10px;
+    margin-top: -40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    flex-wrap: wrap;
+    
+}
+.right::before{
+    content: '';
+    position: relative;
+
+}
+
+.right #home{
+    border: 1px solid grey;
+    text-align: center;
+    margin: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #00000059;
+    
+}
+
+.right #home .box1{
+    width: 215px;
+    height: 20px;
+    margin-top: 3px;
+    padding: 5px;
+    cursor: pointer ;
+    text-align: center;
+}
+.right #home .elem{
+    display: flex;
+    margin: 15px 5px;
+    padding: 0px;
+}
+.right #home .elem i{
+    font-size: 35px;
+    margin: 0 45% 0 5%;
+    margin-bottom: 20px;
+}
+.right #home p{
+    font-weight: bold;
+}
+/* .num-wrapper{
+    position: relative;
+
+}
+.num-wrapper span{
+    padding: 0 0px;
+    margin: 0 auto;
+} */
+.num-box{
+    display: inline-block;
+    overflow: hidden;
+    height: 1em;
+    line-height: 1em;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+.num-box:after{
+    position: relative;
+    white-space: pre;
+    content: "0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9";
+}
+.num-box.first-number:after{
+    animation: animate-number 1s steps(10) infinite;
+}
+.num-box.second-number:after{
+    animation: animate-number 10s steps(10) infinite;
+}
+.num-box.third-number:after{
+    animation: animate-number 100s steps(10) infinite;
+}
+.num-box.forth-number:after{
+    animation: animate-number 1000s steps(10) infinite;
+}
+@keyframes animate-number{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: -10em;
+    }
+}
+
+@media (max-width:902px) {
+    .right{
+        position: absolute;
+        height: 100%;
+        width: 87vw;
+        float: left;
+        margin: 10px;
+        margin-top: -80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+        flex-wrap: wrap;
+        
+    }
+    .right::before{
+        content: '';
+        position: relative;
+    
+    }
+}
+@media (max-width:650px){
+    .right{
+        position: absolute;
+        height: 100%;
+        width: 87vw;
+        float: left;
+        margin: 10px;
+        margin-top: -130%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+        flex-wrap: wrap;
+        
+    }
+}

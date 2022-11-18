@@ -1,0 +1,28 @@
+<?php
+    
+    include("includes/config.php");
+
+    if(isset($_POST['contact_btn'])){
+        
+        $name = $_POST['full_name'];
+        $no = $_POST['mobile_no']; 
+        $email = $_POST['email'];
+        $customer = $_POST['customer'];
+        $msg = $_POST['message'];
+       
+        $query = "INSERT INTO `contact`(`NAME`, `MOBILE`, `EMAIL`, `E_CUSTOMER`, `QUERY`) VALUES ('$name','$no','$email','$customer','$msg')";
+
+        $run_query = mysqli_query($con , $query);
+        
+        if($run_query){
+            echo"<script>alert('Your Call request is succesfully submited')</script>";
+        }
+        else{
+          echo"<script>alert('Your Call request Failed')</script>"; 
+        }
+         
+        
+    }
+
+
+?>
